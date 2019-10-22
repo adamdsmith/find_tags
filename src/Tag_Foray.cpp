@@ -5,6 +5,7 @@
 #include <sstream>
 #include <time.h>
 #include <cmath>
+#include <math.h>
 
 Tag_Foray::Tag_Foray () :  // default ctor for deserializing into
   line_no(0),   // line numbers reset even when resuming
