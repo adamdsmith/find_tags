@@ -1,6 +1,7 @@
 #include "Lotek_Data_Source.hpp"
 #include <sstream>
 #include <cstdio>
+#include <math.h>
 
 Lotek_Data_Source::Lotek_Data_Source(DB_Filer * db, Tag_Database *tdb, Frequency_MHz defFreq, int bootnum) :
   db(db),
