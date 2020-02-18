@@ -1,4 +1,5 @@
-In order to build the find_tags module of motus, you need to have a C++ compiler and the boost libraries. If you are using a Debian based Linux distribution, you can use the following command to install the required parts
+In order to build the find_tags module of motus, you need to have a C++ compiler and the boost libraries.
+If you are using a Debian based Linux distribution, you can use the following command to install the required parts
 
    sudo apt-get install libboost-all-dev g++ libsqlite3-dev
 
