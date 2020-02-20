@@ -217,18 +217,18 @@ CREATE TABLE IF NOT EXISTS tagDeployments (
        projectID INT NOT NULL,     -- motus project ID
        motusTagID INT NOT NULL,    -- motus tag ID
        tsStart FLOAT(53) NOT NULL, -- unix timestamp of start of deployment
-       tsEnd FLOAT(53) NOT NULL,   -- unix timestamp of end of deployment
-       INDEX tagDeployments_projectID (projectID),
-       INDEX tagDeployments_motusTagID (motusTagID)
+       tsEnd FLOAT(53) NOT NULL   -- unix timestamp of end of deployment
+--       INDEX tagDeployments_projectID (projectID),
+--       INDEX tagDeployments_motusTagID (motusTagID)
 );--
 
 CREATE TABLE IF NOT EXISTS receiverDeployments (
        projectID INT NOT NULL,     -- motus project ID
        deviceID INT NOT NULL,      -- motus device ID
        tsStart FLOAT(53) NOT NULL, -- unix timestamp of start of deployment
-       tsEnd FLOAT(53) NOT NULL,   -- unix timestamp of end of deployment
-       INDEX receiverDeployments_projectID (projectID),
-       INDEX receiverDeployments_deviceID (deviceID)
+       tsEnd FLOAT(53) NOT NULL   -- unix timestamp of end of deployment
+--       INDEX receiverDeployments_projectID (projectID),
+--       INDEX receiverDeployments_deviceID (deviceID)
 );--
 
 CREATE TABLE IF NOT EXISTS maxKeys (
@@ -284,7 +284,7 @@ REPLACE INTO bumpCounter (k, n) values (0, 0);--
 
 -- The uploads table holds records of all uploaded files received.
 CREATE TABLE IF NOT EXISTS uploads (
-   uploadID INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT, -- identifies a unique upload
+   uploadID INTEGER PRIMARY KEY NOT NULL, -- identifies a unique upload
    jobID INTEGER NOT NULL,                               -- id of top-level job for this uploaded file
    motusUserID INTEGER NOT NULL,                         -- motus id of user who uploaded the file
    motusProjectID INTEGER NOT NULL,                      -- motus id of project selected by user to receive products of this upload
