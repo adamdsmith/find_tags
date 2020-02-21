@@ -340,3 +340,20 @@ CREATE TABLE IF NOT EXISTS batchState (
     tsRun TEXT, 
     state INTEGER, 
     version TEXT);
+    
+CREATE TABLE IF NOT EXISTS timeFixes (
+    monoBN INTEGER, 
+    tsLow FLOAT(53) NOT NULL, 
+    tsHigh FLOAT(53) NOT NULL, 
+    fixedBy FLOAT(53) NOT NULL, 
+    error FLOAT(53) NOT NULL, 
+    comment TEXT);
+
+CREATE TABLE IF NOT EXISTS params (
+    batchID INTEGER NOT NULL, 
+    ts FLOAT(53) NOT NULL, 
+    ant TINYINT NOT NULL,
+    param VARCHAR(32) NOT NULL,
+    val FLOAT(53) NOT NULL,
+    error INTEGER,
+    errinfo TEXT);
