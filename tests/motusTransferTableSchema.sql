@@ -331,3 +331,12 @@ CREATE TABLE IF NOT EXISTS reprocessBatches (
 );--
 
 CREATE INDEX IF NOT EXISTS reprocessBatches_batchID on reprocessBatches(batchID);--
+
+CREATE TABLE IF NOT EXISTS batchState (
+    batchID INTEGER NOT NULL, 
+    progName TEXT, 
+    monoBN INTEGER, 
+    tsData TEXT, 
+    tsRun TEXT, 
+    state INTEGER, 
+    version TEXT);
